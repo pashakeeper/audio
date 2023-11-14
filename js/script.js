@@ -21,7 +21,7 @@ $(function () {
     // Like
     $('.top_slide__head__image_holder__like').click(function (e) {
         e.preventDefault();
-        $(this).toggleClass('active')
+        $(this).toggleClass('active');
     });
     // first slider
     $('.top_slider').slick({
