@@ -19,6 +19,7 @@
     font-size: 14px;
   }
   .section_1 .disc_box {
+    position: absolute;
     max-width: 50%;
   }
   .top_slider .prev_arrow {
