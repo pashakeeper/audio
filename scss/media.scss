@@ -1,0 +1,166 @@
+@media (max-width: 1440px) {
+    .section_1 {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 1260px) {
+    .categories_section {
+        .cat__row {
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+@media (max-width: 1077px) {
+    .controls_side {
+        display: flex;
+    }
+
+    .header {
+        .main_menu {
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .section_1 {
+        .disc_box {
+            max-width: 50%;
+        }
+    }
+
+    .top_slider {
+        .prev_arrow {
+            left: -4px;
+        }
+    }
+
+    .prev_arrow_second {
+        left: -4px;
+    }
+
+    .categories_section .cat_box {
+        height: auto;
+    }
+}
+
+@media (max-width:991px) {
+    body {
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    .section_1 {
+        height: auto;
+        padding-top: 108px;
+        padding-bottom: 150px;
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .col-lg-5.col-sm-7 {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    .section_1 .disc_box {
+        right: -100px;
+        top: -100px;
+    }
+
+    .section_1 .wave_box {
+        width: 100%;
+        height: auto;
+        bottom: unset;
+    }
+
+    .top_slide {
+        margin-bottom: 20px;
+        max-width: 342px;
+        height: auto;
+    }
+    .top_slide__head__image_holder__main_image {
+        width: 100%;
+    }
+
+    .controls_side {
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .menu_box {
+        position: fixed;
+        display: block;
+        left: -100%;
+        opacity: 0;
+        visibility: hidden;
+        top: 79px;
+        width: 50%;
+        height: 100%;
+        z-index: 2;
+        background: #1D2123;
+        transition: all .5s ease;
+
+        &.visible {
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .main_menu {
+            display: block;
+            margin-top: 40px;
+
+            li {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .burger {
+        display: block;
+        margin-left: 20px;
+        height: 17px;
+    }
+
+    .main_menu.visible {
+        position: fixed;
+        left: 0;
+    }
+
+    .categories_section .cat__row {
+        flex-wrap: wrap;
+
+        .cat_box {
+            height: 132px;
+            width: 100%;
+            max-width: 345px;
+            margin-left: auto;
+            margin-right: auto;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+    .read_more {
+        display: block;
+    }
+    .footer {
+        .row.m-0 {
+            .col-lg-6 {
+                padding: 0;
+            }
+        }
+        .copyright {
+            text-align: center;
+        }
+    }
+}
