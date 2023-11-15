@@ -109,4 +109,12 @@ $(function () {
         }
         button.on('click', toggleHTML);
     }
+    // sub menu mob
+    if (wd < 991) {
+        $('.submenu_icon').click(function(e){
+            e.preventDefault();
+            $('.sub_menu').slideToggle();
+            $(this).toggleClass('active');
+        })
+    }
 });
