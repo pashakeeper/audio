@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (max-width: 1440px) {
   .section_1 {
     overflow-x: hidden;
@@ -86,10 +87,35 @@
     height: auto;
     bottom: unset;
   }
+  .top_slider, .recommend_slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 9px;
+  }
   .top_slide {
     margin-bottom: 20px;
-    max-width: 342px;
+    max-width: 48%;
     height: auto;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .top_slider__content h3 a {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    /* Ограничение числа отображаемых строк */
+    max-height: 3em;
   }
   .top_slide__head__image_holder__main_image {
     width: 100%;
@@ -181,6 +207,9 @@
   }
   .main_btn {
     margin-bottom: 30px;
+  }
+  .footer .form_box {
+    margin-top: 20px;
   }
 }
 @media (max-width: 358px) {

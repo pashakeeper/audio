@@ -55,15 +55,19 @@
             font-size: 20px;
         }
     }
+
     .main_menu li:hover::before {
         width: 0;
     }
+
     .main_menu li:hover .submenu_icon {
         transform: unset;
     }
+
     .submenu_icon.active {
         transform: scaleY(-1) !important;
     }
+
     .main_menu li .sub_menu {
         visibility: visible;
         height: auto;
@@ -112,10 +116,30 @@
         bottom: unset;
     }
 
+    .top_slider, .recommend_slider {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 9px;
+    }
+
     .top_slide {
         margin-bottom: 20px;
-        max-width: 342px;
+        max-width: 48%;
         height: auto;
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .top_slider__content h3 a {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        /* Ограничение числа отображаемых строк */
+        max-height: 3em;
     }
 
     .top_slide__head__image_holder__main_image {
@@ -198,6 +222,7 @@
             text-align: center;
         }
     }
+
     .to_top {
         right: 10px;
     }
@@ -207,6 +232,7 @@
     .controls_side {
         gap: 2px;
     }
+
     .section_1 {
         padding-top: 70px;
     }
@@ -223,11 +249,17 @@
     .main_btn {
         margin-bottom: 30px;
     }
+
+    .footer .form_box {
+        margin-top: 20px;
+    }
 }
+
 @media (max-width: 358px) {
     .header .row {
         flex-wrap: nowrap;
     }
+
     .controls_side a {
         margin-left: 5px;
     }
