@@ -56,6 +56,10 @@
         }
     }
 
+    .show_more_btn {
+        display: flex;
+    }
+
     .main_menu li:hover::before {
         width: 0;
     }
@@ -116,11 +120,12 @@
         bottom: unset;
     }
 
-    .top_slider, .recommend_slider {
+    .top_slider,
+    .recommend_slider {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center;
         gap: 9px;
     }
 
@@ -130,6 +135,16 @@
         height: auto;
         margin-left: unset;
         margin-right: unset;
+    }
+
+    body {
+        .top_slider .top_slide {
+            display: none;
+        }
+        .recommend_slider .top_slide {
+            display: none;
+        }
+
     }
 
     .top_slider__content h3 a {

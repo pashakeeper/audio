@@ -338,7 +338,7 @@ section {
     height: 446px;
     margin-left: auto;
     margin-right: auto;
-    display: block !important;
+    // display: block !important;
 }
 
 .top_slide__head__image_holder {
@@ -736,4 +736,20 @@ section {
         opacity: 1;
         bottom: 24px;
     }
+}
+
+.show_more_btn {
+    width: 100%;
+    max-width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    font-weight: 600;
+    height: 44px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(159, 174, 179, 1);
+    color: white;
 }

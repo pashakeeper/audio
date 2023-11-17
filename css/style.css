@@ -340,7 +340,6 @@ section {
   height: 446px;
   margin-left: auto;
   margin-right: auto;
-  display: block !important;
 }
 
 .top_slide__head__image_holder {
@@ -796,4 +795,24 @@ section {
   visibility: visible;
   opacity: 1;
   bottom: 24px;
+}
+
+.show_more_btn {
+  width: 100%;
+  max-width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  font-weight: 600;
+  height: 44px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: rgb(159, 174, 179);
+  color: white;
 }/*# sourceMappingURL=style.css.map */
