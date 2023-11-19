@@ -116,58 +116,43 @@ $(function () {
             $('.sub_menu').slideToggle();
             $(this).toggleClass('active');
         })
+        function initShowMore($items, $showMoreBtn, itemsPerPage) {
+            let visibleItems = itemsPerPage;
+          
+            // Показать первые несколько элементов
+            $items.slice(0, visibleItems).fadeIn();
+          
+            // Если есть больше элементов, показать кнопку
+            if ($items.length > visibleItems) {
+              $showMoreBtn.fadeIn();
+            }
+          
+            // Обработчик нажатия кнопки "Показать больше"
+            $showMoreBtn.on('click', function () {
+              visibleItems += itemsPerPage;
+          
+              // Показать следующие элементы
+              $items.slice(0, visibleItems).fadeIn();
+          
+              // Если больше нет элементов, скрыть кнопку
+              if (visibleItems >= $items.length) {
+                $showMoreBtn.fadeOut();
+              }
+            });
+          }
+          
+          // Применить для первого блока
+          const itemsPerPage1 = 2;
+          const $items1 = $('.top_slider .top_slide');
+          const $showMoreBtn1 = $('.first');
+          initShowMore($items1, $showMoreBtn1, itemsPerPage1);
+          
+          // Применить для второго блока
+          const itemsPerPage2 = 2;
+          const $items2 = $('.recommend_slider .top_slide');
+          const $showMoreBtn2 = $('.second');
+          initShowMore($items2, $showMoreBtn2, itemsPerPage2);
     }
 
-    // Show more
-      const itemsPerPage = 2; // Измените на количество элементов, которые вы хотите показывать за раз
-      const $items = $('.top_slider .top_slide');
-      const $showMoreBtn = $('.show_more_btn');
-      let visibleItems = itemsPerPage;
-
-      // Показать первые несколько элементов
-      $items.slice(0, visibleItems).show();
-
-      // Если есть больше элементов, показать кнопку
-      if ($items.length > visibleItems) {
-        $showMoreBtn.show();
-      }
-
-      // Обработчик нажатия кнопки "Показать больше"
-      $showMoreBtn.on('click', function() {
-        visibleItems += itemsPerPage;
-
-        // Показать следующие элементы
-        $items.slice(0, visibleItems).show();
-
-        // Если больше нет элементов, скрыть кнопку
-        if (visibleItems >= $items.length) {
-          $showMoreBtn.hide();
-        }
-      });
-
-      const itemsPerPage2 = 2; // Измените на количество элементов, которые вы хотите показывать за раз
-      const $items2 = $('.recommend_slider .top_slide');
-      const $showMoreBtn2 = $('.show_more_btn');
-      let visibleItems2 = itemsPerPage2;
-
-      // Показать первые несколько элементов
-      $items2.slice(0, visibleItems2).show();
-
-      // Если есть больше элементов, показать кнопку
-      if ($items2.length > visibleItems2) {
-        $showMoreBtn2.show();
-      }
-
-      // Обработчик нажатия кнопки "Показать больше"
-      $showMoreBtn2.on('click', function() {
-        visibleItems2 += itemsPerPage2;
-
-        // Показать следующие элементы
-        $items2.slice(0, visibleItems2).show();
-
-        // Если больше нет элементов, скрыть кнопку
-        if (visibleItems2 >= $items2.length) {
-          $showMoreBtn2.hide();
-        }
-      });
+   
 });

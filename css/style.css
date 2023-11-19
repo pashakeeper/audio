@@ -797,7 +797,7 @@ section {
   bottom: 24px;
 }
 
-.show_more_btn {
+body .show_more_btn {
   width: 100%;
   max-width: 98%;
   margin-left: auto;
@@ -815,4 +815,6 @@ section {
   text-align: center;
   background: rgb(159, 174, 179);
   color: white;
+  vertical-align: middle;
+  line-height: 44px;
 }/*# sourceMappingURL=style.css.map */
